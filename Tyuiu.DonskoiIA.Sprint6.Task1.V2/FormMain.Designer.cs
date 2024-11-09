@@ -190,6 +190,7 @@
             Controls.Add(buttonDone);
             Controls.Add(groupBoxValuesInput);
             Controls.Add(groupBoxWithRequirements);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
