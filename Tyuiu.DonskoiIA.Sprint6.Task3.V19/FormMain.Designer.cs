@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             buttonDone = new Button();
             buttonHelp = new Button();
             groupBoxWithRequirements = new GroupBox();
             textBoxTask = new TextBox();
+            dataGridViewResult = new DataGridView();
+            dataGridViewDataInput = new DataGridView();
+            formMainBindingSource = new BindingSource(components);
             groupBoxWithRequirements.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewResult).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDataInput).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)formMainBindingSource).BeginInit();
             SuspendLayout();
             // 
             // buttonDone
@@ -44,6 +51,7 @@
             buttonDone.TabIndex = 4;
             buttonDone.Text = "Выполнить";
             buttonDone.UseVisualStyleBackColor = false;
+            buttonDone.Click += buttonDone_Click;
             // 
             // buttonHelp
             // 
@@ -54,6 +62,7 @@
             buttonHelp.TabIndex = 5;
             buttonHelp.Text = "Справка";
             buttonHelp.UseVisualStyleBackColor = false;
+            buttonHelp.Click += buttonHelp_Click;
             // 
             // groupBoxWithRequirements
             // 
@@ -74,20 +83,51 @@
             textBoxTask.ReadOnly = true;
             textBoxTask.Size = new Size(193, 398);
             textBoxTask.TabIndex = 0;
-            textBoxTask.Text = "Дана матрица 5 на 5\r\n  4  32 -20  27  21\r\n 17  15  -1  -2  -1\r\n -3  18  12 -10  29\r\n  7 -15   2  -8  12\r\n-10  25   5  27  21\r\nОтсортировать её 5 столбец по возрастанию";
+            textBoxTask.Text = "Дана матрица 5 на 5.\r\nОтсортировать её 5 столбец по возрастанию";
+            // 
+            // dataGridViewResult
+            // 
+            dataGridViewResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewResult.Location = new Point(510, 12);
+            dataGridViewResult.Name = "dataGridViewResult";
+            dataGridViewResult.ReadOnly = true;
+            dataGridViewResult.Size = new Size(278, 278);
+            dataGridViewResult.TabIndex = 7;
+            // 
+            // dataGridViewDataInput
+            // 
+            dataGridViewDataInput.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDataInput.Location = new Point(217, 12);
+            dataGridViewDataInput.Name = "dataGridViewDataInput";
+            dataGridViewDataInput.Size = new Size(278, 278);
+            dataGridViewDataInput.TabIndex = 8;
+            dataGridViewDataInput.EditingControlShowing += dataGridViewDataInput_EditingControlShowing;
+            // 
+            // formMainBindingSource
+            // 
+            formMainBindingSource.DataSource = typeof(FormMain);
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridViewDataInput);
+            Controls.Add(dataGridViewResult);
             Controls.Add(groupBoxWithRequirements);
             Controls.Add(buttonHelp);
             Controls.Add(buttonDone);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FormMain";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Спринт 6 | Таск 3 | Вариант 19 | Донской И. А.";
+            Load += FormMain_Load;
             groupBoxWithRequirements.ResumeLayout(false);
             groupBoxWithRequirements.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewResult).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDataInput).EndInit();
+            ((System.ComponentModel.ISupportInitialize)formMainBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -97,5 +137,8 @@
         private Button buttonHelp;
         private GroupBox groupBoxWithRequirements;
         private TextBox textBoxTask;
+        private DataGridView dataGridViewResult;
+        private DataGridView dataGridViewDataInput;
+        private BindingSource formMainBindingSource;
     }
 }
