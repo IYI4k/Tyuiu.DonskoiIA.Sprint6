@@ -21,7 +21,6 @@ namespace Tyuiu.DonskoiIA.Sprint6.Task5.V8
             dataGridViewTable.ColumnHeadersVisible = false;
 
             dataGridViewTable.ColumnCount = 2;
-            dataGridViewTable.Columns[0].Width = 20;
             dataGridViewTable.Columns[0].Width = 50;
 
             this.chartDiag.ChartAreas[0].AxisX.Title = "Îñü X";
