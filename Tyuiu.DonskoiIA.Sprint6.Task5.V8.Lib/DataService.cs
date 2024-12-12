@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.IO;
 
 using tyuiu.cources.programming.interfaces.Sprint6;
-using System.Reflection.PortableExecutable;
 
 namespace Tyuiu.DonskoiIA.Sprint6.Task5.V8.Lib
 {
