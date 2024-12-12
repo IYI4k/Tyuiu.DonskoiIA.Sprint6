@@ -41,7 +41,7 @@
             groupBoxOut = new GroupBox();
             textBoxOut = new TextBox();
             panelLeft = new Panel();
-            splitter1 = new Splitter();
+            splitterInMiddle = new Splitter();
             panelRight = new Panel();
             openFileDialogTask = new OpenFileDialog();
             toolTip = new ToolTip(components);
@@ -173,13 +173,13 @@
             panelLeft.Size = new Size(395, 327);
             panelLeft.TabIndex = 1;
             // 
-            // splitter1
+            // splitterInMiddle
             // 
-            splitter1.Location = new Point(395, 123);
-            splitter1.Name = "splitter1";
-            splitter1.Size = new Size(3, 327);
-            splitter1.TabIndex = 2;
-            splitter1.TabStop = false;
+            splitterInMiddle.Location = new Point(395, 123);
+            splitterInMiddle.Name = "splitterInMiddle";
+            splitterInMiddle.Size = new Size(3, 327);
+            splitterInMiddle.TabIndex = 2;
+            splitterInMiddle.TabStop = false;
             // 
             // panelRight
             // 
@@ -205,7 +205,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panelRight);
-            Controls.Add(splitter1);
+            Controls.Add(splitterInMiddle);
             Controls.Add(panelLeft);
             Controls.Add(groupBoxTask);
             Controls.Add(panelUp);
@@ -236,7 +236,7 @@
         private GroupBox groupBoxIn;
         private GroupBox groupBoxOut;
         private Panel panelLeft;
-        private Splitter splitter1;
+        private Splitter splitterInMiddle;
         private Panel panelRight;
         private OpenFileDialog openFileDialogTask;
         private ToolTip toolTip;
