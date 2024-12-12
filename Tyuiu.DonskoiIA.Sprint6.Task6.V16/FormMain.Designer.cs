@@ -78,6 +78,7 @@
             // 
             // buttonDone
             // 
+            buttonDone.Enabled = false;
             buttonDone.Image = Properties.Resources.RunButton;
             buttonDone.Location = new Point(69, 0);
             buttonDone.Name = "buttonDone";
