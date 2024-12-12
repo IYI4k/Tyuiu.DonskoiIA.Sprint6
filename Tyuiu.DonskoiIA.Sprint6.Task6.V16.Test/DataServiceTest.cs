@@ -11,9 +11,9 @@ namespace Tyuiu.DonskoiIA.Sprint6.Task6.V16.Test
         {
             DataService ds = new DataService();
 
-            var res = ds.CollectTextFromFile("ab", Path.Combine(new string[] { Path.GetTempPath(), "Task6V16Input.txt" }));
+            var res = ds.CollectTextFromFile(Path.Combine(new string[] { Path.GetTempPath(), "Task6V16Input.txt" }));
 
-            Assert.AreEqual("ab 7b hebab b wellb", res);
+            Assert.AreEqual("7b hebab b wellb", res);
         }
     }
 }
